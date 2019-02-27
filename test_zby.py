@@ -2,6 +2,7 @@ from pytest import approx
 import main
 import json
 import subprocess
+import time
 
 
 def ffprobe(file_name) -> dict:
@@ -23,6 +24,7 @@ def test():
     orig_duration = float(orig_meta['streams'][0]['duration'])
 
     main.main()
+    time.sleep(30)
 
     meta_720 = ffprobe(fnout_720)
     duration_720 = float(meta_720['streams'][0]['duration'])
