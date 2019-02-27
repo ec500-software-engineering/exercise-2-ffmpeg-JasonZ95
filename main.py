@@ -2,8 +2,8 @@ import subprocess
 import multiprocessing
 import os
 
-input_path = "C:/Users/zhoub/OneDrive/Desktop/ffmpeg"
-output_path = "C:/Users/zhoub/OneDrive/Desktop/ffmpeg"
+input_path = os.listdir()
+output_path = os.listdir()
 
 
 def ffmpeg_720(video_name):
