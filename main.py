@@ -9,14 +9,14 @@ output_path = os.listdir()
 def ffmpeg_720(video_name):
     bash_command = "ffmpeg -i " + input_path + "/" + video_name + \
                    ' -r 30 -b 2M -s hd720 ' + output_path + "/" + video_name[:-4] + "_720.mp4"
-    subprocess.call(bash_command)
+    subprocess.check_call(bash_command.split(' '))
     print("720-size video conversion finished")
 
 
 def ffmpeg_480(video_name):
     bash_command = "ffmpeg -i " + input_path + "/" + video_name + \
                    ' -r 30 -b 1M -s hd480 ' + output_path + "/" + video_name[:-4] + "_480.mp4"
-    subprocess.call(bash_command)
+    subprocess.check_call(bash_command.split(' '))
     print("480-size video conversion finished")
 
 
