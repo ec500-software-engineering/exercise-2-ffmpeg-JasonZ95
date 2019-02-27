@@ -16,9 +16,9 @@ def ffprobe(file_name) -> dict:
 
 
 def test():
-    fnin = './test.mp4'
-    fnout_720 = './test_720.mp4'
-    fnout_480 = './test_480.mp4'
+    fnin = 'test.mp4'
+    fnout_720 = 'test_720.mp4'
+    fnout_480 = 'test_480.mp4'
     orig_meta = ffprobe(fnin)
     orig_duration = float(orig_meta['streams'][0]['duration'])
 
