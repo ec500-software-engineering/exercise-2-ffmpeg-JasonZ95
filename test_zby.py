@@ -38,7 +38,6 @@ def test():
             print("test not passed")
 
         print("test passed")
-        break
 
 
 if __name__ == "__main__":
