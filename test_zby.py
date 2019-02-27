@@ -24,7 +24,7 @@ def test():
 
     flag = main.main()
     
-    while (flag == 1):
+    if(flag == 1):
         meta_720 = ffprobe(fnout_720)
         duration_720 = float(meta_720['streams'][0]['duration'])
 
