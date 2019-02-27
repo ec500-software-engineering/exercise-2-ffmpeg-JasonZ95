@@ -30,10 +30,11 @@ def run():
     print("All processes start")
     p.close()
     p.join()
-
+    return 1
 
 def main():
-    run()
+    flag = run()
+    return flag
 
 
 if __name__ == '__main__':
