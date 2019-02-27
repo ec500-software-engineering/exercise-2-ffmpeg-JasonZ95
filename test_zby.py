@@ -2,6 +2,7 @@ from pytest import approx
 import main
 import json
 import subprocess
+import ffprobe
 
 
 def ffprobe(file_name) -> dict:
