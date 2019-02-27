@@ -21,7 +21,7 @@ def ffmpeg_480(video_name):
 
 
 def run():
-    p = multiprocessing.Pool(processes=multiprocessing.cpu_count()-2)
+    p = multiprocessing.Pool(processes=multiprocessing.cpu_count())
     print("The current computer has " + str(multiprocessing.cpu_count()) + " cpu cores.")
     for video in os.listdir(input_path):
         if video.endswith(".mp4"):
