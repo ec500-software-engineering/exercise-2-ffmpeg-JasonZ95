@@ -22,21 +22,23 @@ def test():
     orig_meta = ffprobe(fnin)
     orig_duration = float(orig_meta['streams'][0]['duration'])
 
-    main.main()
+    flag = main.main()
+    
+    while (flag == 1):
+        meta_720 = ffprobe(fnout_720)
+        duration_720 = float(meta_720['streams'][0]['duration'])
 
-    meta_720 = ffprobe(fnout_720)
-    duration_720 = float(meta_720['streams'][0]['duration'])
+        meta_480 = ffprobe(fnout_480)
+        duration_480 = float(meta_480['streams'][0]['duration'])
 
-    meta_480 = ffprobe(fnout_480)
-    duration_480 = float(meta_480['streams'][0]['duration'])
+        try:
+            assert orig_duration == approx(duration_720)
+            assert orig_duration == approx(duration_480)
+        except:
+            print("test not passed")
 
-    try:
-        assert orig_duration == approx(duration_720)
-        assert orig_duration == approx(duration_480)
-    except:
-        print("test not passed")
-
-    print("test passed")
+        print("test passed")
+        break
 
 
 if __name__ == "__main__":
