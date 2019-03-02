@@ -33,6 +33,7 @@ def run():
 
 def main():
     flag = run()
+    return -1
 
 
 if __name__ == '__main__':
