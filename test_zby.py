@@ -16,7 +16,7 @@ def ffprobe(file_name) -> dict:
 
 
 def test():
-    fnin = 'test.mp4'
+    fnin = 'test.avi'
     fnout_720 = 'test_720.avi'
     fnout_480 = 'test_480.avi'
     orig_meta = ffprobe(fnin)
