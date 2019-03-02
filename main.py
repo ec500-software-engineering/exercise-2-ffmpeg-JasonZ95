@@ -32,7 +32,7 @@ def run():
     p.join()
 
 def main():
-    flag = run()
+    run()
     return -1
 
 
