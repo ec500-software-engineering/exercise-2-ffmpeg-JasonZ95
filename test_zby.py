@@ -30,11 +30,8 @@ def test():
         meta_480 = ffprobe(fnout_480)
         duration_480 = float(meta_480['streams'][0]['duration'])
 
-    try:
-        assert orig_duration == approx(duration_720)
-        assert orig_duration == approx(duration_480)
-    except:
-        print("test not passed")
+    assert orig_duration == approx(duration_720)
+    assert orig_duration == approx(duration_480)
 
     print("test passed")
 
