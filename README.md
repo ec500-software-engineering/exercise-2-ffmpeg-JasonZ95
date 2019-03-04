@@ -17,5 +17,6 @@ p = multiprocessing.Pool(processes=multiprocessing.cpu_count()-2) //python
 ```
 I intend to limit the number of process, but since the virtual machine has only two cores, I just set the number as default, which is the num of cpu cores.
 ## Result  
-![cores](cores)
-![process](processes)
+![cores](https://github.com/ec500-software-engineering/exercise-2-ffmpeg-JasonZ95/blob/master/cores.png)
+![process](https://github.com/ec500-software-engineering/exercise-2-ffmpeg-JasonZ95/blob/master/processes.png)
+![result](https://github.com/ec500-software-engineering/exercise-2-ffmpeg-JasonZ95/blob/master/result.png)
